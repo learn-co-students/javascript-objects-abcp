@@ -1,9 +1,9 @@
-var playlist = {Mountain Goats: "Going to Georgia"};
+var playlist = {MountainGoats: "Going to Georgia"};
 function updatePlaylist(playlist,artist,song){
-  playlist.artist = song;
+  playlist[artist] = song;
   return playlist;
 }
 function removeFromPlaylist(playlist,artist){
-  delete playlist.artist;
+  delete playlist[artist];
   return playlist;
 }
