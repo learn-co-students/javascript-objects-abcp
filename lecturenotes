@@ -1,0 +1,83 @@
+# Objects
+
+An object is an associative data structure, like a dictionary.
+Think of it like a little bundle of attributes or data in which you can look up a key in order to find it’s value. Much like looking up the definition of a word in a dictionary.
+
+## Creating
+
+Two ways to create an object. Ojbect literal and Object constructor:
+
+```javascript
+var course = {
+  title: "Bootcamp Prep",
+  description: "an introduction to JavaScript"
+}
+
+var course = new Object({
+  title: "Bootcamp Prep",
+  description: "an introduction to JavaScript"
+})
+```
+
+## Adding
+
+* dot notation
+
+```javascript
+course.instructor = "Sophie DeBenedetto"
+```
+
+* bracket method
+
+```javascript
+course["instructor"] = "Sophie DeBenedetto"
+```
+
+## Accessing Value of a Key
+
+* dot notation
+
+```javascript
+course.instructor
+  => "Sophie DeBenedetto"
+```
+
+* bracket notation
+
+```javascript
+course["instructor"]
+  => "Sophie DeBenedetto"
+```
+
+## Updating
+We can use the same dot or bracket notation to update the value of an existing key.
+
+However, using bracket or dot notation to add a key/value pair or update the value of an existing key changes the given object
+
+What if we don't want to change the original object, but make a new object with the necessary changes/additions?
+
+## Non-Destructively Adding/Updating an Object with `Object.assign()`
+
+Create a new object from an existing object.
+Takes in arguments of objects that you want to copy and combine into a brand new object.
+
+What is the difference between the following two lines of code?
+What happens to the `course` object after the first line is executed?
+
+```javascript
+Object.assign(course, {start_date: "2017-01-01"})
+
+Object.assign({}, course, {start_date: "2017-01-01"})
+```
+
+## Deleting
+
+```javascript
+delete course["title"]
+```
+
+## Updating with Object.assign()
+
+```javascript
+Object.assign({}, course, {description: "a kick-ass introduction to JS"})
+```
