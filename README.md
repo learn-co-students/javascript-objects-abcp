@@ -51,7 +51,6 @@ var meals = { breakfast: "oatmeal" };
 
 var meals = new Object({ breakfast: 'oatmeal' })
 ```
-
 In this case, `breakfast` is the key and `"oatmeal"` is the value.
 
 **Note that all keys in JavaScript objects are strings.** This means that even though you can create an object `{1: 'is the loneliest number'}`, the key here, `1` gets turned into the string `'1'`. Values can be of any type.
